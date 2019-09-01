@@ -1,0 +1,7 @@
+version: '3'
+services:
+  parser:
+    image: "hungaikev/parser:1.0.0"
+    restart: always
+    ports:
+      - "8000:8000"

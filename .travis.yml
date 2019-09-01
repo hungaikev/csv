@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t hungaikev/parser:1.0.0
+  script:
+    # log in to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push hungaikev/parser:1.0.0
